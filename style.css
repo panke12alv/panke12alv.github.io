@@ -1,12 +1,12 @@
 body {
-    background-color: #f5f5f5; /* Fondo claro para una apariencia limpia */
-    color: #333; /* Texto en gris oscuro para buena legibilidad */
+    background-color: #f5f5f5;
+    color: #333;
     font-family: Arial, sans-serif;
     margin: 0;
 }
 
 .navbar {
-    background-color: #2c3e50; /* Azul oscuro para la barra de navegación */
+    background-color: #2c3e50;
     padding: 10px;
     position: fixed;
     width: 100%;
@@ -23,14 +23,14 @@ body {
 }
 
 .navbar a:hover {
-    background-color: #34495e; /* Efecto hover ligeramente más claro */
+    background-color: #34495e;
 }
 
 .header {
     padding: 20px;
-    margin-top: 60px; /* Para evitar que el contenido quede debajo de la barra de navegación */
+    margin-top: 60px;
     text-align: center;
-    background-color: #2980b9; /* Azul medio para el encabezado */
+    background-color: #2980b9;
     color: white;
     border-radius: 10px;
 }
@@ -40,41 +40,222 @@ body {
     margin-top: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    text-align: justify;
+    text-align-last: center;
 }
 
-/* Diferentes colores para cada sección */
 .sobremi {
-    background-color: #ecf0f1; /* Fondo claro para Sobre Mí */
-    color: #2c3e50; /* Texto en azul oscuro */
+    background-color: #ecf0f1;
+    color: #2c3e50;
 }
 
 .proyectos {
-    background-color: #bdc3c7; /* Gris claro para Proyectos */
-    color: #2c3e50; /* Texto en azul oscuro */
+    background-color: #bdc3c7;
+    color: #2c3e50;
 }
 
 .blog {
-    background-color: #95a5a6; /* Gris medio para Blog */
+    background-color: #95a5a6;
     color: white;
 }
 
 .contacto {
-    background-color: #7f8c8d; /* Gris oscuro para Contacto */
+    background-color: #7f8c8d;
     color: white;
 }
 
 h1 {
-    color: white; /* Título principal en blanco */
+    color: white;
     text-align: center;
 }
 
 h2, h3 {
-    color: #2c3e50; /* Títulos de secciones en azul oscuro */
+    color: #2c3e50;
     text-align: center;
 }
 
 p {
     margin: 10px 0;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra para efecto de flotación */
+    flex: 1 1 calc(33% - 30px); /* Ajuste para tres columnas */
+    transition: box-shadow 0.3s, transform 0.3s; /* Transición suave */
+}
+
+.flex-item:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el cursor */
+    transform: translateY(-10px); /* Desplazamiento hacia arriba al pasar el cursor */
+}
+
+.flex-item:nth-child(1) {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Verde agua */
+}
+
+.flex-item:nth-child(2) {
+    background: linear-gradient(to right, #a1c4fd, #fbc2eb); /* De verde agua a rosa pastel */
+}
+
+.flex-item:nth-child(3) {
+    background: linear-gradient(to right, #c2e9fb, #fbc2eb); /* Rosa pastel */
+}
+
+.flex-item:nth-child(4) {
+    background: linear-gradient(to right, #fbc2eb, #f9a8d4); /* Rosa más intenso */
+}
+
+.flex-item:nth-child(5) {
+    background: linear-gradient(to right, #f9a8d4, #fbc2eb); /* Rosa pastel a rosa más intenso */
+}
+
+.flex-item:nth-child(6) {
+    background: linear-gradient(to right, #f9a8d4, #a1c4fd); /* De rosa a verde agua */
+}
+
+#educacion h3 {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#experiencia h3, #habilidades h3 {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.education-content {
+    text-align: center;
+}
+
+.education-content p {
+    margin-bottom: 10px;
+}
+
+.image-link {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.floated-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.floated-image:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        padding: 15px;
+        text-align: center;
+        border-top: 1px solid #34495e;
+    }
+
+    .header {
+        margin-top: 100px;
+    }
+
+    .section {
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .flex-item {
+        flex: 1 1 calc(50% - 30px); /* Ajuste para dos columnas */
+    }
+
+    .floated-image {
+        width: 100%; /* Ajusta el tamaño de las imágenes en pantallas más pequeñas */
+        max-width: 100%; /* Asegura que no se desborden */
+        margin: 10px 0; /* Añade espacio vertical entre imágenes */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        padding: 10px;
+    }
+
+    .header {
+        padding: 15px;
+        margin-top: 120px;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .flex-item {
+        flex: 1 1 100%; /* Ajuste para una columna */
+    }
+
+    .floated-image {
+        width: 100%; /* Ajusta el tamaño de las imágenes en pantallas más pequeñas */
+        max-width: 100%; /* Asegura que no se desborden */
+        margin: 10px 0; /* Añade espacio vertical entre imágenes */
+    }
 }
 
 
