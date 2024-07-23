@@ -8,14 +8,22 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="#inicio">Inicio</a>
-        <a href="#sobremi">Sobre Mí</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#blog">Blog</a>
-        <a href="#contacto">Contacto</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <span class="menu-icon-bar"></span>
+            <span class="menu-icon-bar"></span>
+            <span class="menu-icon-bar"></span>
+        </label>
+        <div class="navbar-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#sobremi">Sobre Mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#blog">Blog</a>
+            <a href="#contacto">Contacto</a>
+        </div>
     </div>
 
-    <div id="inicio" class="header">
+    <div class="header">
         <h1>María Guadalupe Mendoza Rangel</h1>
         <p>Bienvenidos a mi página personal</p>
     </div>
@@ -90,7 +98,32 @@
 
     <div id="proyectos" class="section proyectos">
         <h2>Proyectos</h2>
-        <p>Descripción de proyectos destacados</p>
+        <div class="proyectos-container">
+            <div class="proyecto-item">
+                <img src="https://static.theclinic.cl/media/2023/04/02-211346_5man_gatos-naranjas-foto-principal-880x500.jpg" alt="Proyecto 1">
+                <p>Descripción del Proyecto 1</p>
+            </div>
+            <div class="proyecto-item">
+                <img src="ruta/a/tu/imagen2.jpg" alt="Proyecto 2">
+                <p>Descripción del Proyecto 2</p>
+            </div>
+            <div class="proyecto-item">
+                <img src="ruta/a/tu/imagen3.jpg" alt="Proyecto 3">
+                <p>Descripción del Proyecto 3</p>
+            </div>
+            <div class="proyecto-item">
+                <img src="ruta/a/tu/imagen4.jpg" alt="Proyecto 4">
+                <p>Descripción del Proyecto 4</p>
+            </div>
+            <div class="proyecto-item">
+                <img src="ruta/a/tu/imagen5.jpg" alt="Proyecto 5">
+                <p>Descripción del Proyecto 5</p>
+            </div>
+            <div class="proyecto-item">
+                <img src="https://static.theclinic.cl/media/2023/04/02-211346_5man_gatos-naranjas-foto-principal-880x500.jpg" alt="Proyecto 6">
+                <p>Descripción del Proyecto 6</p>
+            </div>
+        </div>
     </div>
 
     <div id="blog" class="section blog">

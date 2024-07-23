@@ -4,16 +4,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
 }
-
 .navbar {
-    background-color: #2c3e50;
+    background-color: rgba(44, 62, 80, 0.9); 
     padding: 10px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar a {
@@ -22,10 +22,10 @@ body {
     text-decoration: none;
 }
 
-.navbar a:hover {
-    background-color: #34495e;
-}
 
+.menu-toggle {
+    display: none; 
+}
 .header {
     padding: 20px;
     margin-top: 60px;
@@ -33,6 +33,26 @@ body {
     background-color: #2980b9;
     color: white;
     border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: "";
+    background: url('https://previews.123rf.com/images/gmast3r/gmast3r1711/gmast3r171100640/92369514-conjunto-de-elementos-de-infograf%C3%ADa-futurista-de-computadora-resumen-de-tecnolog%C3%ADa-banner-horizontal.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.header h1, .header p {
+    position: relative;
+    z-index: 1;
 }
 
 .section {
@@ -92,50 +112,42 @@ p {
     padding: 20px;
     margin: 15px;
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra para efecto de flotación */
-    flex: 1 1 calc(33% - 30px); /* Ajuste para tres columnas */
-    transition: box-shadow 0.3s, transform 0.3s; /* Transición suave */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    flex: 1 1 calc(33% - 30px); 
+    transition: box-shadow 0.3s, transform 0.3s; 
 }
 
 .flex-item:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el cursor */
-    transform: translateY(-10px); /* Desplazamiento hacia arriba al pasar el cursor */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-10px); 
 }
 
 .flex-item:nth-child(1) {
-    background: linear-gradient(to right, #a1c4fd, #c2e9fb); /* Verde agua */
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb); 
 }
 
 .flex-item:nth-child(2) {
-    background: linear-gradient(to right, #a1c4fd, #fbc2eb); /* De verde agua a rosa pastel */
+    background: linear-gradient(to right, #a1c4fd, #fbc2eb); 
 }
 
 .flex-item:nth-child(3) {
-    background: linear-gradient(to right, #c2e9fb, #fbc2eb); /* Rosa pastel */
+    background: linear-gradient(to right, #c2e9fb, #fbc2eb); 
 }
 
 .flex-item:nth-child(4) {
-    background: linear-gradient(to right, #fbc2eb, #f9a8d4); /* Rosa más intenso */
+    background: linear-gradient(to right, #fbc2eb, #f9a8d4); 
 }
 
 .flex-item:nth-child(5) {
-    background: linear-gradient(to right, #f9a8d4, #fbc2eb); /* Rosa pastel a rosa más intenso */
+    background: linear-gradient(to right, #f9a8d4, #fbc2eb); 
 }
 
 .flex-item:nth-child(6) {
-    background: linear-gradient(to right, #f9a8d4, #a1c4fd); /* De rosa a verde agua */
+    background: linear-gradient(to right, #f9a8d4, #a1c4fd); 
 }
 
-#educacion h3 {
-    background-color: #2c3e50;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-#experiencia h3, #habilidades h3 {
-    background-color: #2c3e50;
+#educacion h3, #experiencia h3, #habilidades h3 {
+    background-color: rgba(44, 62, 80, 0.9); 
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -201,6 +213,36 @@ p {
     transform: translateY(-5px);
 }
 
+.proyectos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.proyecto-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 30px); 
+    transition: box-shadow 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+.proyecto-item img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.proyecto-item:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -239,23 +281,17 @@ p {
     }
 
     .flex-item {
-        flex: 1 1 calc(50% - 30px); /* Ajuste para dos columnas */
+        flex: 1 1 calc(50% - 30px); 
     }
 
     .floated-image {
-        width: 100%; /* Ajusta el tamaño de las imágenes en pantallas más pequeñas */
-        max-width: 100%; /* Asegura que no se desborden */
-        margin: 10px 0; /* Añade espacio vertical entre imágenes */
+        width: 100%; 
+        max-width: 100%; 
+        margin: 10px 0; 
     }
 
-    .contact-link {
-        padding: 10px;
-        gap: 5px;
-    }
-
-    .contact-link img {
-        width: 30px;
-        height: 30px;
+    .proyecto-item {
+        width: calc(50% - 30px); 
     }
 }
 
@@ -290,16 +326,78 @@ p {
     }
 
     .flex-item {
-        flex: 1 1 100%; /* Ajuste para una columna */
+        flex: 1 1 100%; 
     }
 
-    .floated-image {
-        width: 100%; /* Ajusta el tamaño de las imágenes en pantallas más pequeñas */
-        max-width: 100%; /* Asegura que no se desborden */
-        margin: 10px 0; /* Añade espacio vertical entre imágenes */
+    .proyecto-item {
+        width: 100%; 
     }
 }
 
 
+.menu-toggle {
+    display: none; 
+}
+
+.menu-icon {
+    display: none; 
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.menu-icon-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px auto;
+    transition: 0.3s;
+}
 
 
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(44, 62, 80, 0.9);
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .navbar-links a {
+        padding: 15px;
+        text-align: center;
+        border-top: 1px solid #34495e;
+    }
+
+    .navbar-links a:first-child {
+        border-top: none;
+    }
+
+    .menu-toggle:checked ~ .navbar-links {
+        display: flex; 
+    }
+
+    .menu-toggle:checked + .menu-icon .menu-icon-bar:nth-child(1) {
+        transform: rotate(45deg);
+        background: white;
+    }
+
+    .menu-toggle:checked + .menu-icon .menu-icon-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .menu-icon .menu-icon-bar:nth-child(3) {
+        transform: rotate(-45deg);
+        background: white;
+    }
+}
