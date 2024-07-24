@@ -36,24 +36,25 @@ body {
     padding: 20px;
     margin-top: 60px;
     text-align: center;
-    background-color: #2980b9;
+    background-color: transparent; 
     color: white;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    z-index: 1; 
 }
 
 .header::before {
     content: "";
-    background: url('https://previews.123rf.com/images/gmast3r/gmast3r1711/gmast3r171100640/92369514-conjunto-de-elementos-de-infograf%C3%ADa-futurista-de-computadora-resumen-de-tecnolog%C3%ADa-banner-horizontal.jpg') no-repeat center center;
+    background: url('https://img.freepik.com/vector-premium/fondo-banner-formas-cuadradas-abstractas-azul-rosa-plantilla-fondo-patron-banner-diseno-grafico-abstracto-vector_181182-18823.jpg') no-repeat center center;
     background-size: cover;
-    opacity: 0.3; 
+    opacity: 0.8;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1; 
 }
 
 .header h1, .header p {
@@ -176,7 +177,7 @@ p {
 
 .floated-image {
     width: 300px;
-    height: auto;
+    height: 200px;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s, transform 0.3s;
