@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
 }
+
 .navbar {
     background-color: rgba(44, 62, 80, 0.9); 
     padding: 10px;
@@ -12,8 +13,13 @@ body {
     top: 0;
     z-index: 1000;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the nav bar */
     align-items: center;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: center;
 }
 
 .navbar a {
@@ -22,10 +28,10 @@ body {
     text-decoration: none;
 }
 
-
 .menu-toggle {
     display: none; 
 }
+
 .header {
     padding: 20px;
     margin-top: 60px;
