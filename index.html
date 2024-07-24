@@ -7,41 +7,145 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    
     <div class="navbar">
-        <a href="#educacion">Educación</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#contacto">Contacto</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <span class="menu-icon-bar"></span>
+            <span class="menu-icon-bar"></span>
+            <span class="menu-icon-bar"></span>
+        </label>
+        <div class="navbar-links">
+            <a href="#sobremi">Sobre Mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#blog">Blog</a>
+            <a href="#contacto">Contacto</a>
+        </div>
     </div>
 
-   
     <div class="header">
         <h1>María Guadalupe Mendoza Rangel</h1>
+        <p>Bienvenidos a mi página personal</p>
     </div>
 
-    
-    <div id="educacion" class="section">
-        <h2>Educación</h2>
-        <p>olaolaolaoa</p>
-        <img src="https://static.theclinic.cl/media/2023/04/02-211346_5man_gatos-naranjas-foto-principal-880x500.jpg" alt="Imagen de educación" class="right-image">
+    <div id="sobremi" class="section sobremi">
+        <h2>Sobre Mí</h2>
+        <div id="educacion">
+            <h3>Educación</h3>
+            <div class="education-content">
+                <p>Estudiante de Ingeniería en Software en la Universidad Politécnica de Santa Rosa Jáuregui desde 2022 hasta la fecha.</p>
+                <a href="https://www.google.com/maps/place/Polit%C3%A9cnica+de+Santa+Rosa/@20.8428677,-100.4356375,17z/data=!4m14!1m7!3m6!1s0x85d4a626e79f1fc9:0xdda7c4672995c724!2sPolit%C3%A9cnica+de+Santa+Rosa!8m2!3d20.8428627!4d-100.4330626!16s%2Fg%2F12hm_b1dp!3m5!1s0x85d4a626e79f1fc9:0xdda7c4672995c724!8m2!3d20.8428627!4d-100.4330626!16s%2Fg%2F12hm_b1dp?entry=ttu" class="image-link">
+                    <img src="https://www.diariodequeretaro.com.mx/incoming/9k369a-universidad-politecnica-srj.jpg/ALTERNATES/LANDSCAPE_1140/Universidad%20Polit%C3%A9cnica%20SRJ.jpg" alt="Universidad Politécnica de Santa Rosa Jáuregui" class="floated-image">
+                </a>
+                <a href="#" class="image-link">
+                    <img src="https://codiceinformativo.com/wp-content/uploads/2020/06/politecnica-santa-rosa.jpg" alt="Imagen 2" class="floated-image">
+                </a>
+                <a href="#" class="image-link">
+                    <img src="https://via.placeholder.com/300x200?text=Imagen+3" alt="Imagen 3" class="floated-image">
+                </a>
+            </div>
+        </div>
+        <div id="experiencia">
+            <h3>Experiencia</h3>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <p>Lenguajes de programación: Java, Dev C++.</p>
+                </div>
+                <div class="flex-item">
+                    <p>Bases de datos: MySQL.</p>
+                </div>
+                <div class="flex-item">
+                    <p>Desarrollo de videojuegos 2D y 3D en Unity, 2D en GDevelop.</p>
+                </div>
+                <div class="flex-item">
+                    <p>Desarrollo de páginas web con HTML y CSS.</p>
+                </div>
+                <div class="flex-item">
+                    <p>Trabajo con Google Cloud.</p>
+                </div>
+            </div>
+        </div>
+        <div id="habilidades">
+            <h3>Habilidades</h3>
+            <div class="flex-container">
+                <div class="flex-item">
+                    <p>Programación en Java y C++.</p>
+                </div>
+                <div class="flex-item">
+                    <p>Desarrollo de bases de datos con MySQL.</p>
+                </div>
+                <div class="flex-item">
+                    <p>Desarrollo de videojuegos en Unity y GDevelop.</p>
+                </div>
+                <div class="flex-item">
+                    <p>Desarrollo web con HTML y CSS.</p>
+                </div>
+                <div class="flex-item">
+                    <p>Gestión y despliegue de proyectos en Google Cloud.</p>
+                </div>
+                <div class="flex-item">
+                    <p>Resolución de problemas y pensamiento crítico.</p>
+                </div>
+                <div class="flex-item">
+                    <p>Trabajo en equipo y comunicación efectiva.</p>
+                </div>
+                <div class="flex-item">
+                    <p>Adaptabilidad y aprendizaje rápido.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div id="experiencia" class="section">
-        <h2>Experiencia</h2>
-        <p>oaloalaoa</p>
+    <div id="proyectos" class="section proyectos">
+        <h2>Proyectos</h2>
+        <div class="proyectos-container">
+            <div class="proyecto-item">
+                <img src="https://static.theclinic.cl/media/2023/04/02-211346_5man_gatos-naranjas-foto-principal-880x500.jpg" alt="Proyecto 1">
+                <p>Descripción del Proyecto 1</p>
+            </div>
+            <div class="proyecto-item">
+                <img src="ruta/a/tu/imagen2.jpg" alt="Proyecto 2">
+                <p>Descripción del Proyecto 2</p>
+            </div>
+            <div class="proyecto-item">
+                <img src="ruta/a/tu/imagen3.jpg" alt="Proyecto 3">
+                <p>Descripción del Proyecto 3</p>
+            </div>
+            <div class="proyecto-item">
+                <img src="ruta/a/tu/imagen4.jpg" alt="Proyecto 4">
+                <p>Descripción del Proyecto 4</p>
+            </div>
+            <div class="proyecto-item">
+                <img src="ruta/a/tu/imagen5.jpg" alt="Proyecto 5">
+                <p>Descripción del Proyecto 5</p>
+            </div>
+            <div class="proyecto-item">
+                <img src="https://static.theclinic.cl/media/2023/04/02-211346_5man_gatos-naranjas-foto-principal-880x500.jpg" alt="Proyecto 6">
+                <p>Descripción del Proyecto 6</p>
+            </div>
+        </div>
     </div>
 
-    <div id="habilidades" class="section">
-        <h2>Habilidades</h2>
-        <p>olaoalaooa</p>
+    <div id="blog" class="section blog">
+        <h2>Blog</h2>
+        <p>Artículos, tutoriales y pensamientos técnicos</p>
     </div>
 
-    <div id="contacto" class="section">
+    <div id="contacto" class="section contacto">
         <h2>Contacto</h2>
-        <p>olaoalaolaoao</p>
+        <div class="contact-info">
+            <a href="mailto:panke.gmr@gmail.com" class="contact-link">
+                <img src="https://cdn.icon-icons.com/icons2/2428/PNG/512/gmail_black_logo_icon_147126.png" alt="Correo Electrónico">
+                <p>panke.gmr@gmail.com</p>
+            </a>
+            <a href="https://wa.me/1234567890" class="contact-link">
+                <img src="https://icones.pro/wp-content/uploads/2021/02/icone-du-logo-whatsapp-noir.png" alt="WhatsApp">
+                <p>442 113 8363</p>
+            </a>
+            <a href="https://www.instagram.com/panke12alv/" class="contact-link">
+                <img src="https://cdn.icon-icons.com/icons2/2428/PNG/512/instagram_black_logo_icon_147122.png" alt="Instagram">
+                <p>panke12alv</p>
+            </a>
+        </div>
     </div>
-
 </body>
 </html>

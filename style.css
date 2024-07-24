@@ -1,64 +1,409 @@
 body {
+    background-color: #f5f5f5;
+    color: #333;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
 }
 
 .navbar {
-    overflow: hidden;
-    background-color: #333;
+    background-color: rgba(44, 62, 80, 0.9); 
+    padding: 10px;
     position: fixed;
-    top: 0;
     width: 100%;
-    text-align: center; 
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Center the nav bar */
+    align-items: center;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: center;
 }
 
 .navbar a {
-    display: inline-block; 
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
+    color: white;
+    padding: 10px;
     text-decoration: none;
 }
 
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
+.menu-toggle {
+    display: none; 
 }
-
 
 .header {
-    padding: 60px;
+    padding: 20px;
+    margin-top: 60px;
     text-align: center;
-    background: #1abc9c;
+    background-color: #2980b9;
     color: white;
-    font-size: 24px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
 }
 
+.header::before {
+    content: "";
+    background: url('https://previews.123rf.com/images/gmast3r/gmast3r1711/gmast3r171100640/92369514-conjunto-de-elementos-de-infograf%C3%ADa-futurista-de-computadora-resumen-de-tecnolog%C3%ADa-banner-horizontal.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.header h1, .header p {
+    position: relative;
+    z-index: 1;
+}
 
 .section {
-    padding: 60px 20px;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-align-last: center;
 }
 
-#educacion {
-    background-color: #f4f4f4;
+.sobremi {
+    background-color: #ecf0f1;
+    color: #2c3e50;
 }
 
-#experiencia {
-    background-color: #e2e2e2;
+.proyectos {
+    background-color: #bdc3c7;
+    color: #2c3e50;
 }
 
-#habilidades {
-    background-color: #cccccc;
+.blog {
+    background-color: #95a5a6;
+    color: white;
 }
 
-#contacto {
-    background-color: #b2b2b2;
+.contacto {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+p {
+    margin: 10px 0;
+    text-align: justify;
+    text-align-last: center;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+    flex: 1 1 calc(33% - 30px); 
+    transition: box-shadow 0.3s, transform 0.3s; 
+}
+
+.flex-item:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-10px); 
+}
+
+.flex-item:nth-child(1) {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb); 
+}
+
+.flex-item:nth-child(2) {
+    background: linear-gradient(to right, #a1c4fd, #fbc2eb); 
+}
+
+.flex-item:nth-child(3) {
+    background: linear-gradient(to right, #c2e9fb, #fbc2eb); 
+}
+
+.flex-item:nth-child(4) {
+    background: linear-gradient(to right, #fbc2eb, #f9a8d4); 
+}
+
+.flex-item:nth-child(5) {
+    background: linear-gradient(to right, #f9a8d4, #fbc2eb); 
+}
+
+.flex-item:nth-child(6) {
+    background: linear-gradient(to right, #f9a8d4, #a1c4fd); 
+}
+
+#educacion h3, #experiencia h3, #habilidades h3 {
+    background-color: rgba(44, 62, 80, 0.9); 
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.education-content {
+    text-align: center;
+}
+
+.education-content p {
+    margin-bottom: 10px;
+}
+
+.image-link {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.floated-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.floated-image:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px);
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #34495e;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact-link img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-link:hover {
+    background-color: #1abc9c;
+    transform: translateY(-5px);
+}
+
+.proyectos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.proyecto-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 30px); 
+    transition: box-shadow 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+.proyecto-item img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+.proyecto-item:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar a {
+        padding: 15px;
+        text-align: center;
+        border-top: 1px solid #34495e;
+    }
+
+    .header {
+        margin-top: 100px;
+    }
+
+    .section {
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .flex-item {
+        flex: 1 1 calc(50% - 30px); 
+    }
+
+    .floated-image {
+        width: 100%; 
+        max-width: 100%; 
+        margin: 10px 0; 
+    }
+
+    .proyecto-item {
+        width: calc(50% - 30px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        padding: 10px;
+    }
+
+    .header {
+        padding: 15px;
+        margin-top: 120px;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .flex-item {
+        flex: 1 1 100%; 
+    }
+
+    .proyecto-item {
+        width: 100%; 
+    }
 }
 
 
-.right-image {
-    float: right;
-    margin-left: 20px;
-    width: 200px; 
+.menu-toggle {
+    display: none; 
+}
+
+.menu-icon {
+    display: none; 
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.menu-icon-bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px auto;
+    transition: 0.3s;
+}
+
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(44, 62, 80, 0.9);
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .navbar-links a {
+        padding: 15px;
+        text-align: center;
+        border-top: 1px solid #34495e;
+    }
+
+    .navbar-links a:first-child {
+        border-top: none;
+    }
+
+    .menu-toggle:checked ~ .navbar-links {
+        display: flex; 
+    }
+
+    .menu-toggle:checked + .menu-icon .menu-icon-bar:nth-child(1) {
+        transform: rotate(45deg);
+        background: white;
+    }
+
+    .menu-toggle:checked + .menu-icon .menu-icon-bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .menu-icon .menu-icon-bar:nth-child(3) {
+        transform: rotate(-45deg);
+        background: white;
+    }
 }
